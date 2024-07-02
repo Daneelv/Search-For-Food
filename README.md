@@ -11,7 +11,7 @@
 
 ###### Postgres Database Setup
 
-1. make sure that you have installed postgress
+1. make sure that you have installed postgresSQL
 2. create a .env file inside the root of the project copy and past the following code into the .env file.
 3. Replace the `<yourUsername>` and `<yourPassword>` tags with your postgres credentials.
 4. Also check that your port and host is configured, the example below contains the default postgres settings
