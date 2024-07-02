@@ -1,15 +1,10 @@
-const { PrismaClient } = require("@prisma/client");
-const prisma = new PrismaClient();
-const foodSearchInput = require("./utils/searchInput");
-
-async function extractEntities(enteredSearch) {
-  console.log(enteredSearch);
-  return {};
-}
+const { foodSearchInput, formatSearchTerm } = require("./src/helpers");
+const extractEntities = require("./src/logic");
 
 (async () => {
+  const wordsToIgnore = ["in", "me", "near", "at", "from", "or"];
   const enteredSearch = await foodSearchInput();
-  console.log(`Search String: ${enteredSearch}`);
-  const results = await extractEntities(enteredSearch);
+  const searchTermArray = formatSearchTerm(enteredSearch, wordsToIgnore);
+  const results = await extractEntities(searchTermArray);
   console.log(results);
 })();

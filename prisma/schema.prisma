@@ -16,27 +16,27 @@ datasource db {
 model Cities{
   id Int @id @default(autoincrement())
   cityName String @unique
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  // createdAt DateTime @default(now())
+  // updatedAt DateTime @updatedAt
 }
 
 model Brands{
   id Int @id @default(autoincrement())
   brandName String @unique
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  // createdAt DateTime @default(now())
+  // updatedAt DateTime @updatedAt
 }
 
 model DishTypes {
   id Int @id @default(autoincrement())
   dishName String @unique
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  // createdAt DateTime @default(now())
+  // updatedAt DateTime @updatedAt
 }
 
 model Diets {
   id Int @id @default(autoincrement())
   dietName String @unique
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  // createdAt DateTime @default(now())
+  // updatedAt DateTime @updatedAt
 }
